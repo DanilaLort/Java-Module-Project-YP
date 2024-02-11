@@ -23,21 +23,20 @@ public class Main {
             }
             if (s.matches("\\d+")) {
                 numOfPersons = Integer.parseInt(s);
+                if (numOfPersons == 1) {
+                    System.out.println("Количество человек равно 1.\nЭто некорректное значение для подсчёта");
+                    System.out.println("Введите количество человек:");
+                    s = scanner.next();
+                } else if (numOfPersons < 1) {
+                    System.out.println("Количество человек меньше 1.\nЭто некорректное значение для подсчёта");
+                    System.out.println("Введите количество человек:");
+                    s = scanner.next();;
+                } else break;
             } else {
                 System.out.println("Это некорректное значение для подсчёта");
                 System.out.println("Введите количество человек:");
                 s = scanner.next();
             }
-            if (numOfPersons == 1) {
-                System.out.println("Количество человек равно 1.\nЭто некорректное значение для подсчёта");
-                System.out.println("Введите количество человек:");
-                s = scanner.next();
-            } else if (numOfPersons < 1) {
-                System.out.println("Количество человек меньше 1.\nЭто некорректное значение для подсчёта");
-                System.out.println("Введите количество человек:");
-                s = scanner.next();;
-            } else break;
-
         }
 
         while (true) {
