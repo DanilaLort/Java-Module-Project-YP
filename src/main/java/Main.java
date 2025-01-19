@@ -8,6 +8,7 @@ public class Main {
     static int numOfPersons;
     static double check = 0;
     static Scanner scanner = new Scanner(System.in);
+
     static ArrayList<Product> products = new ArrayList<>();
     static Calculate calc = new Calculate();
 
